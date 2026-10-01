@@ -24,3 +24,6 @@ HTML, CSS y JavaScript están incluidos en index.html, junto con las imágenes y
 - Fotos propias: las de Mat y Dance son de reemplazo.
 
 Las reservas, compras y formulario son demostraciones. No hay pagos reales ni envío o almacenamiento de datos personales.
+
+## Handoff para desarrollo
+Stack: Laravel + React + Tailwind CSS v4 + shadcn/ui. La carpeta `handoff/` tiene el tema listo para pegar (`firme-theme.css`) y las variantes del botón de shadcn según Figma (`button-variants.ts`). La especificación completa está en el documento de handoff del proyecto.
