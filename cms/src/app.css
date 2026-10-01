@@ -1,0 +1,189 @@
+@import "tailwindcss";
+/*
+ * Firme Studio — tema para Tailwind CSS v4 + shadcn/ui
+ * Fuente: variables y estilos de texto del archivo Figma (página "Look and feel").
+ * Uso: pegar en resources/css/app.css (Laravel + React starter kit) debajo de
+ *   @import "tailwindcss";
+ * y reemplazar el bloque :root / @theme inline que genera shadcn.
+ * Solo tema claro: la marca no define modo oscuro.
+ */
+
+
+:root {
+  /* Marca (Figma: Color/brand/*) */
+  --espresso: #3d281c;
+  --arena: #ece3de;
+  --porcelana: #f7f3f0;
+  --taupe: #b8a396;
+  --arcilla: #8e5a44;
+
+  /* Roles de shadcn/ui */
+  --background: var(--porcelana);
+  --foreground: var(--espresso);          /* Color/text/primary */
+  --card: var(--porcelana);
+  --card-foreground: var(--espresso);
+  --popover: var(--porcelana);
+  --popover-foreground: var(--espresso);
+  --primary: var(--espresso);             /* botón primario, enlaces fuertes */
+  --primary-foreground: var(--porcelana); /* Color/text/inverse */
+  --secondary: var(--arena);              /* secciones alternas, chips */
+  --secondary-foreground: var(--espresso);
+  --muted: var(--arena);
+  --muted-foreground: #6b5549;            /* Color/text/secondary */
+  --accent: var(--arcilla);               /* acento: destacados, últimos cupos */
+  --accent-foreground: var(--porcelana);
+  --destructive: #9b3526;                 /* Color/feedback/error */
+  --success: #46613e;                     /* Color/feedback/success */
+  --border: #d8cac1;                      /* Color/border/default */
+  --input: #d8cac1;
+  --ring: var(--arcilla);
+
+  /* Radios: tarjetas y campos 4 px; botones y chips en píldora */
+  --radius: 0.25rem;
+
+  /* Panel interno (sidebar de shadcn) */
+  --sidebar: var(--arena);
+  --sidebar-foreground: var(--espresso);
+  --sidebar-primary: var(--espresso);
+  --sidebar-primary-foreground: var(--porcelana);
+  --sidebar-accent: var(--porcelana);
+  --sidebar-accent-foreground: var(--espresso);
+  --sidebar-border: #d8cac1;
+  --sidebar-ring: var(--arcilla);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-success: var(--success);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+
+  /* Colores de marca como utilidades: bg-espresso, text-arcilla, etc. */
+  --color-espresso: var(--espresso);
+  --color-arena: var(--arena);
+  --color-porcelana: var(--porcelana);
+  --color-taupe: var(--taupe);
+  --color-arcilla: var(--arcilla);
+
+  --radius-sm: calc(var(--radius) - 2px);
+  --radius-md: var(--radius);
+  --radius-lg: calc(var(--radius) + 2px);
+  --radius-xl: calc(var(--radius) + 4px);
+
+  /* Tipografías: font-serif para títulos, font-sans para todo lo demás */
+  --font-serif: "Cormorant Garamond", Georgia, serif;
+  --font-sans: "Montserrat", ui-sans-serif, system-ui, sans-serif;
+}
+
+/* Estilos de texto de Figma como utilidades (text-display-xl, eyebrow, …) */
+@utility text-display-xl {
+  /* Display/XL · hero desktop */
+  font-family: var(--font-serif);
+  font-weight: 300;
+  font-size: 6rem;      /* 96 */
+  line-height: 1;
+  letter-spacing: -0.01em;
+}
+@utility text-display-l {
+  /* Display/L · títulos de página */
+  font-family: var(--font-serif);
+  font-weight: 300;
+  font-size: 4rem;      /* 64 */
+  line-height: 1.08;
+  letter-spacing: -0.005em;
+}
+@utility text-heading-m {
+  /* Heading/M · títulos de sección en tarjetas y modales */
+  font-family: var(--font-serif);
+  font-weight: 400;
+  font-size: 2.5rem;    /* 40 */
+  line-height: 1.15;
+}
+@utility text-heading-s {
+  /* Heading/S */
+  font-family: var(--font-serif);
+  font-weight: 500;
+  font-size: 1.75rem;   /* 28 */
+  line-height: 1.2;
+}
+@utility eyebrow {
+  /* Eyebrow · etiquetas sobre los títulos */
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: 0.75rem;   /* 12 */
+  line-height: 1.4;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+}
+@utility text-body-l {
+  /* Body/L · intros */
+  font-family: var(--font-sans);
+  font-weight: 300;
+  font-size: 1.125rem;  /* 18 */
+  line-height: 1.6;
+}
+@utility text-body-m {
+  /* Body/M · texto por defecto */
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-size: 0.9375rem; /* 15 */
+  line-height: 1.6;
+}
+@utility text-label-button {
+  /* Label/Button */
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: 0.8125rem; /* 13 */
+  line-height: 1;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+@utility text-caption {
+  /* Caption */
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-size: 0.75rem;   /* 12 */
+  line-height: 1.5;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground font-sans text-body-m;
+  }
+  h1, h2, h3 {
+    @apply font-serif text-foreground;
+  }
+}
+
+/* Móvil (< 768 px): escalas de Figma Mobile */
+@media (max-width: 767px) {
+  .text-display-xl { font-size: 3.75rem; }  /* 60 */
+  .text-display-l  { font-size: 2.75rem; }  /* 44 */
+  .text-heading-m  { font-size: 2.25rem; }  /* 36 */
+}
