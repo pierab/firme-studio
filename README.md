@@ -13,7 +13,7 @@ HTML, CSS y JavaScript están incluidos en index.html, junto con las imágenes y
 - Pago por paquetes de clases, coordinado por WhatsApp o en efectivo en el estudio (sin comprobante automático por ahora).
 - Recordatorios de clase 24 h, 12 h y 2 h antes.
 - Dominio: firmestudio.com.pe.
-- Textos legales (términos, privacidad, cancelaciones y Libro de Reclamaciones) en borrador, adaptados a la normativa peruana.
+- Textos legales (términos, privacidad y cancelaciones) en borrador, adaptados a la normativa peruana, y página del Libro de Reclamaciones (#libro-de-reclamaciones).
 
 ## Pendiente de confirmar con el estudio
 - Razón social, RUC, dirección legal y correo (necesarios para los textos legales).
